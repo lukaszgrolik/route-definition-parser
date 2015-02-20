@@ -1,0 +1,25 @@
+{
+  "name": "short-route-parser",
+  "version": "0.1.0",
+  "description": "Parses shortened route definitions into more specific form",
+  "author": "Łukasz Grolik <lukasz@grolik.pl>",
+  "scripts": {
+    "test": "mocha"
+  },
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukaszgrolik/short-route-parser"
+  },
+  "bugs": {
+    "url": "https://github.com/lukaszgrolik/short-route-parser/issues"
+  },
+  "keywords": [
+    "route"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "yamljs": "0.2.1"
+  },
+  "license": "MIT"
+}

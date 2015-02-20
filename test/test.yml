@@ -1,0 +1,45 @@
+- input:
+    - 'get /users': 'User#find'
+    - 'GET /users': 'User#find'
+    - 'GeT /users': 'User#find'
+    - ' GET  /users ': ' User # find '
+  output:
+    method: 'get'
+    path: '/users'
+    model: 'User'
+    action: 'find'
+
+- input:
+    'POST /users': 'User#create'
+    'PUT /posts/:id': 'Post#update'
+    'DELETE /comments/:id': 'Comment#delete'
+  output:
+    - method: 'post'
+      path: '/users'
+      model: 'User'
+      action: 'create'
+    - method: 'put'
+      path: '/posts/:id'
+      model: 'Post'
+      action: 'update'
+    - method: 'delete'
+      path: '/comments/:id'
+      model: 'Comment'
+      action: 'delete'
+
+- input:
+    'DEL /users/:id': 'User#delete'
+  output:
+    method: 'delete'
+    path: '/users/:id'
+    model: 'User'
+    action: 'delete'
+
+- input: 'foo'
+  output: 'error'
+
+- input:
+  output: 'error'
+
+# @todo throw when key has no space
+# @todo throw when val has no "#" sign
