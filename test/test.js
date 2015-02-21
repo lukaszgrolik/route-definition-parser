@@ -47,8 +47,13 @@ function doTest(input, output) {
 }
 
 function check(actual, expected) {
-  assert.equal(actual.method, expected.method);
-  assert.equal(actual.path, expected.path);
-  assert.equal(actual.model, expected.model);
-  assert.equal(actual.action, expected.action);
+  // console.log('actual', actual)
+  // console.log('expected', expected)
+
+  var fields = ['method', 'path', 'model', 'action'];
+
+  fields.forEach(function(field) {
+    assert.equal(actual.hasOwnProperty(field), true);
+    assert.equal(actual[field], expected[field]);
+  });
 }
