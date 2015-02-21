@@ -41,5 +41,13 @@
 - input:
   output: 'error'
 
-# @todo throw when key has no space
-# @todo throw when val has no "#" sign
+- input: 'foo'
+  output: 'error'
+
+- input:
+    'get/users': 'User#find'
+  output: 'error'
+
+- input:
+    'get /users': 'User.find'
+  output: 'error'

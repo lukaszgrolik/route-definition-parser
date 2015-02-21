@@ -22,6 +22,14 @@ function parse(obj) {
 }
 
 function parseRoute(key, val) {
+  if (key.trim().indexOf(' ') === -1) {
+    throw new Error('Wrong format of route key');
+  }
+
+  if (val.indexOf('#') === -1) {
+    throw new Error('Wrong format of route value');
+  }
+
   var result = {
     method: getMethod(key),
     path: getPath(key),
