@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "main": "main.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/lukaszgrolik/short-route-parser"

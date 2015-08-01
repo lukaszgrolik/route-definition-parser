@@ -6,18 +6,18 @@
 var shortRouteParser = require('short-route-parser');
 
 shortRouteParser.parse({
-  'GET /users/:id': 'User#findOne',
-  'DEL /projects/:projectId/members/:id': 'ProjectMember#remove',
+  'GET /users/:id': 'UserController#findOne',
+  'DEL /projects/:projectId/members/:id': 'ProjectMemberController#remove',
 });
 // => [{
 //   method: 'get',
 //   path: '/users/:id',
-//   model: 'User',
+//   controller: 'UserController',
 //   action: 'findOne'
 // }, {
 //   method: 'delete',
 //   path: '/projects/:projectId/members/:id',
-//   model: 'ProjectMember',
+//   controller: 'ProjectMemberController',
 //   action: 'remove'
 // }]
 ```

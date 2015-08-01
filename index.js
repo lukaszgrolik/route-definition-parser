@@ -43,7 +43,7 @@ function parseRoute(key, val) {
     result = {
       method: getMethod(key),
       path: getPath(key),
-      model: getModel(val),
+      controller: getController(val),
       action: getAction(val),
     };
   }
@@ -106,7 +106,7 @@ function getPath(string) {
   return result;
 }
 
-function getModel(string) {
+function getController(string) {
   var result = string.split('#')[0].trim();
 
   return result;

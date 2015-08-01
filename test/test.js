@@ -1,5 +1,5 @@
 var assert = require("assert")
-var script = require('../main.js');
+var script = require('../index.js');
 var YAML = require('yamljs');
 var spec = YAML.load('./test/test.yml');
 
@@ -50,7 +50,7 @@ function check(actual, expected) {
   // console.log('actual', actual)
   // console.log('expected', expected)
 
-  var fields = ['method', 'path', 'model', 'action'];
+  var fields = ['method', 'path', 'controller', 'action'];
 
   fields.forEach(function(field) {
     assert.equal(actual.hasOwnProperty(field), true);
