@@ -1,11 +1,11 @@
-# short-route-parser
+# route-definition-parser
 
-`npm install short-route-parser`
+`npm install route-definition-parser`
 
 ```js
-var shortRouteParser = require('short-route-parser');
+var rdp = require('route-definition-parser');
 
-shortRouteParser.parse({
+rdp.parse({
   'GET /users/:id': 'UserController#findOne',
   'DEL /projects/:projectId/members/:id': 'ProjectMemberController#remove',
 });
