@@ -1,6 +1,6 @@
 {
   "name": "route-definition-parser",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Parses short route definitions into more detailed form",
   "homepage": "https://github.com/lukaszgrolik/route-definition-parser",
   "author": {
